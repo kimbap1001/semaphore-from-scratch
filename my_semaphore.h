@@ -6,8 +6,7 @@
 
 class MySemaphore {
 private:
-    // TODO: 세마포어 구현에 필요한 멤버 변수들을 선언하세요.
-    // 예: 카운트 변수, 뮤텍스, 조건 변수 등
+    // 카운트 변수, 뮤텍스, 조건 변수 선언
     int count;
     std::mutex mtx;
     std::condition_variable cv;
