@@ -54,6 +54,7 @@ Key design decisions:
 ---
 
 ## Printer Resource Simulation
+<img width="221" height="523" alt="image" src="https://github.com/user-attachments/assets/52d639dd-4789-43de-ac2d-42145a19fe31" />
 
 Simulated 50 concurrent threads competing for 3 shared printer resources.
 
@@ -71,6 +72,7 @@ Thread 45 released a printer after 994 ms.
 ## Benchmark Results
 
 ### Spinlock vs SleepMutex (custom implementations)
+<img width="615" height="252" alt="image" src="https://github.com/user-attachments/assets/7417c38b-f201-4f52-b1af-92e2b4de656d" />
 
 | Threads | Spinlock | SleepMutex |
 |---------|----------|------------|
@@ -83,6 +85,7 @@ Thread 45 released a printer after 994 ms.
 SleepMutex degrades significantly at higher thread counts due to **condition variable overhead** — each unlock/notify cycle carries more cost than busy-waiting in low-contention scenarios.
 
 ### POSIX pthread_mutex vs pthread_spinlock
+<img width="742" height="305" alt="image" src="https://github.com/user-attachments/assets/c663b147-d35e-4014-b809-f477c63f7c70" />
 
 | Threads | pthread_mutex | pthread_spinlock |
 |---------|--------------|-----------------|
